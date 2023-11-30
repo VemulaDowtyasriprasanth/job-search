@@ -1,0 +1,53 @@
+{
+    "featuredJobs": [
+      {
+        "id": 1,
+        "title": "Software Developer",
+        "company": "Innovatech Solutions",
+        "location": "New York, NY",
+        "type": "Full-time",
+        "description": "Seeking a skilled software developer with 5 years of experience in software design and development. Proficiency in Java and Spring Framework required.",
+        "requirements": [
+          "Bachelor's degree in Computer Science or related field",
+          "5+ years of software development experience",
+          "Strong understanding of Java and Spring Framework"
+        ],
+        "responsibilities": [
+          "Develop and maintain high-quality software",
+          "Collaborate with cross-functional teams to define and design new features",
+          "Ensure the performance, quality, and responsiveness of applications"
+        ],
+        "salaryRange": {
+          "min": 80000,
+          "max": 120000
+        },
+        "postedDate": "2023-07-01",
+        "applyLink": "https://www.innovatechsolutions.com/careers/1"
+      },
+      {
+        "id": 2,
+        "title": "Web Developer",
+        "company": "TechFrontier",
+        "location": "Remote",
+        "type": "Contract",
+        "description": "Looking for a front-end web developer familiar with modern frameworks like React or Vue.js to work on exciting web application projects.",
+        "requirements": [
+          "Proficient in HTML, CSS, JavaScript",
+          "Experience with React or Vue.js",
+          "Ability to translate designs into functional user interfaces"
+        ],
+        "responsibilities": [
+          "Develop new user-facing features",
+          "Ensure the technical feasibility of UI/UX designs",
+          "Optimize applications for maximum speed and scalability"
+        ],
+        "salaryRange": {
+          "min": 50000,
+          "max": 70000
+        },
+        "postedDate": "2023-08-15",
+        "applyLink": "https://www.techfrontier.work/careers/2"
+      }
+    ]
+  }
+  
