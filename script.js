@@ -64,6 +64,24 @@ const jobsData = {
       // ... more jobs here
     ]
   };
+  // Handle Registration Form Submission
+    function handleRegistration(event) {
+      event.preventDefault();
+      // Perform input validation and send data to server
+      // On success:
+      alert('Account created successfully! You can now log in.');
+    }
+    // Handle Login Form Submission
+      function handleLogin(event) {
+        event.preventDefault();
+        // Validate login credentials
+        // On success:
+        document.querySelector('.login-registration-section').style.display = 'none';
+        populateJobs(jobsData.featuredJobs.slice(0, 2)); // Show first 2 jobs
+        document.querySelector('.more-jobs-section').style.display = 'block'; // Show 'login to see more jobs' message
+      }
+
+
   
   // Wait for the DOM to load
   document.addEventListener('DOMContentLoaded', function() {
@@ -107,3 +125,69 @@ const jobsData = {
   
       populateJobs(filteredJobs);
   }
+// Mock data for the featured jobs (existing data)
+
+
+// Wait for the DOM to load
+document.addEventListener('DOMContentLoaded', function() {
+  populateJobs(jobsData.featuredJobs);
+
+  // Existing event listener for the filter button
+  document.getElementById('filter-btn').addEventListener('click', filterJobs);
+
+  // Event listeners for login, registration, and job posting forms
+  document.getElementById('loginForm').addEventListener('submit', handleLogin);
+  document.getElementById('registrationForm').addEventListener('submit', handleRegistration);
+  document.getElementById('jobPostingForm').addEventListener('submit', handleJobPosting);
+});
+
+
+
+// Function to handle user login
+function handleLogin(event) {
+  event.preventDefault();
+  // Login logic here
+  console.log('Login successful');
+  // Example: toggleRecruiterForm if user is a recruiter
+}
+
+// Function to handle user registration
+function handleRegistration(event) {
+  event.preventDefault();
+  // Registration logic here
+  console.log('Registration successful');
+  // Example: toggleRecruiterForm if user is a recruiter
+}
+
+// Function to handle job posting
+function handleJobPosting(event) {
+  event.preventDefault();
+  const jobTitle = document.getElementById('jobTitle').value;
+  const jobDescription = document.getElementById('jobDescription').value;
+  const jobRequirements = document.getElementById('jobRequirements').value;
+
+  // Add the new job to the jobsData and update the job list
+  const newJob = {
+      id: jobsData.featuredJobs.length + 1, // Simple ID generation
+      title: jobTitle,
+      description: jobDescription,
+      // ... add other job details as necessary
+  };
+  jobsData.featuredJobs.push(newJob);
+  populateJobs(jobsData.featuredJobs);
+
+  console.log('New job posted:', newJob);
+}
+
+// Gmail Authentication Integration (placeholder)
+function handleGmailAuth() {
+  // Integration logic for Gmail authentication
+  console.log('Gmail Auth');
+}
+
+// Toggle visibility of job posting form for recruiters
+function toggleRecruiterForm() {
+  const jobPostingSection = document.querySelector('.job-posting-form');
+  // Logic to determine if the user is a recruiter
+  // jobPostingSection.style.display = 'block' or 'none';
+}
